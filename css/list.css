@@ -1,0 +1,121 @@
+.list_nav {
+    height: 45px;
+    border-bottom: 2px solid #e83829;
+}
+
+.list_nav .title li {
+    float: left;
+    line-height: 45px;
+    margin-right: 55px;
+}
+
+.list_nav .title a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.list_subnav li {
+    float: left;
+    line-height: 45px;
+    margin-left: 45px;
+}
+
+.list_subnav li:last-child::after {
+    content: '\e665';
+    font-family: "iconfont";
+}
+
+.sp_banner {
+    margin-bottom: 25px;
+}
+
+
+/* 手机列表 */
+
+.list_items {
+    width: 1210px;
+    margin-bottom: 30px;
+}
+
+.list_items li {
+    float: left;
+    width: 288px;
+    height: 458px;
+    border: 1px solid transparent;
+    margin-right: 13px;
+    margin-top: 5px;
+}
+
+.list_items li:hover {
+    border: 1px solid #e83829;
+}
+
+.list_items li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.phone img {
+    margin: 20px 48px 6px;
+}
+
+.phone h4 {
+    padding: 0 10px;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "宋体";
+    margin-bottom: 15px;
+}
+
+.phone p {
+    padding: 0 15px;
+    font-size: 22px;
+    color: #e60012;
+}
+
+.phone p span {
+    font-size: 14px;
+    color: #a4a4a4;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+
+/* 售卖进度条 */
+
+.sell {
+    height: 15px;
+    padding: 0 15px;
+}
+
+.sell div {
+    float: left;
+    line-height: 15px;
+}
+
+.sell .bar {
+    width: 130px;
+    height: 10px;
+    border: 1px solid #e12228;
+    border-radius: 5px;
+    margin: 0 12px;
+}
+
+.sell .bar .in {
+    height: 100%;
+    width: 87px;
+    background-color: #ed282e;
+}
+
+
+/* 购买按钮 */
+
+.phone button {
+    width: 100%;
+    height: 50px;
+    background-color: #b1191a;
+    color: #fff;
+    margin-top: 14px;
+}

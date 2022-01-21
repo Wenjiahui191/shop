@@ -1,0 +1,461 @@
+/* ad弹窗 */
+
+@keyframes admotion {
+    from {
+        tansform: scale(1, 1);
+    }
+    to {
+        transform: scale(1.5, 1.5)
+    }
+}
+
+.ad {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.ad img {
+    transition: tansform .5s;
+    animation: admotion 1s linear infinite alternate;
+}
+
+.main {
+    width: 980px;
+    height: 458px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+
+/* 焦点图 */
+
+.main .focus {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 722px;
+    height: 100%;
+    background-color: green;
+}
+
+.lbtn,
+.rbtn {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 2;
+}
+
+.lbtn {
+    padding-left: 5px;
+    top: 229px;
+    left: 0x;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.rbtn {
+    padding-left: 20px;
+    top: 229px;
+    right: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.lbtn i,
+.rbtn i {
+    line-height: 50px;
+    font-size: 24px;
+    color: #e2e2e2;
+    opacity: .6;
+}
+
+.focus ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600%;
+    height: 100%;
+}
+
+.focus ul li {
+    float: left;
+    height: 458px;
+    width: 722px;
+}
+
+.main .focus a img {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* 小圆圈 */
+
+.focus .circle {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.focus .circle li {
+    float: left;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 1px solid #e83829;
+}
+
+.current {
+    border: 0;
+    background-color: #fbb429;
+}
+
+
+/* 侧边栏 */
+
+.app {
+    position: relative;
+}
+
+.elevator {
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    margin-left: 610px;
+    background-color: #f4f4f4;
+    font-size: 14px;
+}
+
+.elevator ul {
+    padding: 4px 19px 0;
+    width: 66px;
+}
+
+.elevator ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.elevator ul li:nth-child(4) {
+    border: 0;
+}
+
+.elevator ul li a {
+    display: block;
+    height: 45px;
+    width: 100%;
+    text-align: center;
+}
+
+.elevator .backtop {
+    display: none;
+    border-bottom: 0;
+    border-top: 1px solid #ccc;
+    color: #e83829;
+}
+
+.elevator .backtop a {
+    color: #e83829;
+}
+
+.elevator .iconfont {
+    font-size: 19px;
+}
+
+
+/* 新闻快报模块 */
+
+.main .newsflash {
+    float: right;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+}
+
+.newsflash .news {
+    height: 164px;
+    border: 1px solid #e4e4e4;
+}
+
+.news_hd {
+    height: 33px;
+    margin-top: 10px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+}
+
+.news_hd h4 {
+    float: left;
+}
+
+.more {
+    float: right;
+}
+
+.more::after {
+    font-family: "iconfont";
+    content: '\e666';
+    margin-left: 8px;
+}
+
+.news_bd ul li {
+    height: 24px;
+    line-height: 24px;
+    padding: 0 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* 生活服务 */
+
+.lifeservice {
+    overflow: hidden;
+    height: 208px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+}
+
+.lifeservice ul {
+    width: 252px;
+}
+
+.lifeservice ul li {
+    float: left;
+    width: 63px;
+    height: 71px;
+    text-align: center;
+    padding-top: 8px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.lifeservice ul li i {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    font-size: 26px;
+    color: #e83829;
+    animation-name: colorchange;
+    animation-duration: 4s;
+}
+
+.bargin {
+    height: 250px;
+    margin-top: 10px;
+}
+
+
+/* 今日推荐 */
+
+.recom {
+    height: 163px;
+    margin-top: 10px;
+}
+
+.recom_hd {
+    float: left;
+    width: 206px;
+    height: 100%;
+    text-align: center;
+    line-height: 163px;
+    background-color: #5c5251;
+}
+
+.recom_bd {
+    float: left;
+    background-color: #ebebeb;
+}
+
+.recom_bd ul li {
+    float: left;
+    position: relative;
+}
+
+.recom_bd ul li:nth-child(-n+3)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 1px;
+    height: 143px;
+    background-color: #ccc;
+    ;
+}
+
+.recom_bd ul li a {
+    display: block;
+}
+
+
+/* 今日推荐 end*/
+
+
+/* 猜你喜欢start */
+
+.like {
+    margin: 30px 0;
+}
+
+.like_hd {
+    height: 30px;
+}
+
+.like_hd h3 {
+    float: left;
+    font-size: 18px;
+    color: #333333;
+    font-weight: 400;
+}
+
+.like a {
+    float: right;
+    margin-right: 20px;
+    line-height: 27px;
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+}
+
+.like_hd a i {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.like_bd {
+    overflow: hidden;
+    height: 234px;
+    border: 1px solid #ededed;
+}
+
+.like_bd ul {
+    width: 1204px;
+}
+
+.like_bd ul li {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 234px;
+}
+
+.like_bd ul li::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    width: 1px;
+    height: 62px;
+    background-color: #ededed;
+}
+
+
+/* 手机家电电梯层 */
+
+.jiadian {
+    height: 390px;
+}
+
+.jiadian_hd {
+    height: 30px;
+    border-bottom: 2px solid #e83829;
+}
+
+.jiadian_hd h4 {
+    float: left;
+    font-size: 14px;
+    color: #e83829;
+}
+
+.jiadian_hd ul {
+    float: right;
+    line-height: 30px;
+}
+
+.jiadian_hd ul li {
+    float: left;
+    color: #666666;
+}
+
+.jiadian_hd ul li a {
+    display: inline-block;
+    padding: 0 14px;
+    font-size: 12px;
+}
+
+.jiadian_hd ul li:first-child a {
+    color: #e83829;
+}
+
+.jiadian_bd {
+    height: 360px;
+    overflow: hidden;
+}
+
+.jiadian_bd {
+    width: 1220px;
+}
+
+.col_209 {
+    float: left;
+    width: 209px;
+    height: 360px;
+}
+
+.col_209 ul {
+    height: 110px;
+    padding: 12px 12px 0;
+}
+
+.col_209 ul li {
+    float: left;
+    width: 86px;
+    text-align: center;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #ededed;
+}
+
+.col_209 ul li:nth-child(2n-1) {
+    margin-right: 11px;
+}
+
+.col_209 img {
+    width: 100%;
+}
+
+.col_329 {
+    float: left;
+}
+
+.col_221 {
+    float: left;
+}
+
+.jiadian_bd li:nth-child(3) img {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.jiadian_bd li:nth-child(5) img {
+    display: block;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-top: 0;
+}
+
+.brand-icon {
+    margin: 20px 0;
+}

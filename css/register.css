@@ -1,0 +1,164 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.register .hd {
+    height: 82px;
+    border-bottom: 2px solid #e83829;
+}
+
+.register .hd img {
+    height: 57px;
+    margin-top: 22px;
+}
+
+.register .nav_bar {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    margin-top: 10px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+}
+
+.register .nav_bar h3 {
+    float: left;
+}
+
+.register .nav_bar p {
+    float: right;
+}
+
+
+/* 注册主体 */
+
+.reg_form {
+    width: 560px;
+    margin: 55px auto 50px;
+}
+
+.reg_form label {
+    display: inline-block;
+    width: 85px;
+    text-align: right;
+}
+
+.reg_form ul li {
+    margin-bottom: 20px;
+}
+
+.reg_form ul li:nth-child(-n+5) input {
+    /*定义所有输入input外观*/
+    width: 238px;
+    height: 34px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+
+/* 手机号 */
+
+.reg_form ul li:nth-child(1) {
+    position: relative;
+}
+
+.reg_form ul li:nth-child(1) button {
+    position: absolute;
+    top: 0;
+    right: 234px;
+    height: 34px;
+    width: 93px;
+    outline: none;
+    font-size: 10px!important;
+    color: #fff;
+    background-color: #1ba1e6;
+}
+
+
+/* 定义注册表单的提示框 */
+
+.reg_form ul li span {
+    display: none;
+    line-height: 20px;
+    color: #e83829;
+}
+
+.reg_form .pwd {
+    margin-bottom: 10px;
+}
+
+.erro_icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    background: url(../images/error.png);
+}
+
+.success_icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    background: url(../images/success.png);
+}
+
+
+/* 安全等级 */
+
+.safe_icon {
+    padding-left: 160px;
+}
+
+.safe_icon em {
+    display: inline-block;
+    width: 33px;
+    text-align: center;
+    margin-left: 1px;
+    color: #fff;
+}
+
+.ruo {
+    background-color: red;
+}
+
+.zhong {
+    background-color: green;
+}
+
+.qiang {
+    background-color: yellow;
+}
+
+
+/* 同意协议 */
+
+.reg_form ul li:nth-child(6) {
+    margin-left: 95px;
+}
+
+.agree input {
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+.agree a {
+    color: #1ba1e6;
+}
+
+.checkin button {
+    width: 200px;
+    height: 35px;
+    margin-left: 95px;
+    background-color: #e83829;
+    color: #fff;
+}
+
+.copyright {
+    border-top: 1px solid #eee;
+}
