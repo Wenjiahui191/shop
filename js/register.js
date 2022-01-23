@@ -1,3 +1,26 @@
+//点击按钮倒计时且计时期间禁用按钮，此函数可复用
+function clickGet(btn) {
+    var time = 5
+    var timer
+    btn.onclick = function() {
+        clearInterval(timer)
+        timer = setInterval(function() {
+            if (time !== 0) {
+                this.disabled = true;
+                this.innerHTML = time + '秒后重试'
+                this.style.backgroundColor = '#ccc'
+                time--;
+            } else {
+                this.disabled = false
+                this.style.backgroundColor = '#1ba1e6'
+                this.innerHTML = '获取验证码'
+                time = 3
+                clearInterval(timer)
+            }
+        }.bind(this), 1000)
+    }
+}
+
 // 手机号验证
 
 var lis = document.querySelector('.reg_form').querySelectorAll('li'); //选区列表
@@ -20,23 +43,7 @@ phone.addEventListener('blur', function() {
         phone_mes.style.color = 'green'
         phone_mes.innerHTML = '<i class="success_icon"></i>手机号正确';
         //获取验证码
-        var time = 5;
-        ms_btn.addEventListener('click', function() {
-            this.disabled = 'true';
-            this.style.backgroundColor = '#ccc';
-            setInterval(function() {
-                if (time !== 0) {
-                    ms_btn.innerHTML = time + 's后重试';
-                    time--;
-                } else {
-                    ms_btn.disabled = false;
-                    ms_btn.innerHTML = '获取验证码';
-                    ms_btn.style.backgroundColor = '#1ba1e6';
-                }
-            }, 1000)
-            access_num += suiji(1000, 9999);
-            console.log(access_num);
-        });
+        clickGet(ms_btn);
     } else if (this.value == '') {
         phone_mes.style.display = 'none';
     } else {
