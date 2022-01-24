@@ -83,27 +83,28 @@ window.addEventListener('load', function() {
     ul.appendChild(last);
 
     //右侧按钮点击切换轮播图
-    // var flag = true;
+    // flag的作用在于防止快速点击轮播图切换过快
+    var flag = true;
     rbtn.addEventListener('click', function() {
-        // if (flag) {
-        // flag = false;
-        if (num == ul.children.length - 1) {
-            ul.style.left = 0;
-            num = 0;
+        if (flag) {
+            flag = false;
+            if (num == ul.children.length - 1) {
+                ul.style.left = 0;
+                num = 0;
+            }
+            num++;
+            animate(ul, -num * focusWidth, function() {
+                flag = true;
+            });
+            circle++;
+            for (i = 0; i < ul.children.length - 1; i++) {
+                ol.children[i].className = '';
+            }
+            if (circle == ul.children.length - 1) {
+                circle = 0;
+            }
+            ol.children[circle].className = 'current';
         }
-        num++;
-        animate(ul, -num * focusWidth, function() {
-            // flag = true;
-        });
-        circle++;
-        for (i = 0; i < ul.children.length - 1; i++) {
-            ol.children[i].className = '';
-        }
-        if (circle == ul.children.length - 1) {
-            circle = 0;
-        }
-        ol.children[circle].className = 'current';
-        // }
     });
     // 左侧按钮
     lbtn.addEventListener('click', function() {
