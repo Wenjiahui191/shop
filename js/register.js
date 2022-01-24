@@ -37,8 +37,11 @@ var phone = lis[0].children[1]; //  手机号input
 var phone_mes = lis[0].children[2]; //提示信息
 var ms_btn = lis[0].children[3]; //验证码按钮
 var access_num = '';
+// 验证手机号的正则
+var phoneReg = /^(13[0-9]|14[5|7]|15[0|1|2|3|4|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/
 phone.addEventListener('blur', function() {
-    if (this.value.length == 11) {
+    //
+    if (phoneReg.test(this.value)) {
         phone_mes.style.display = 'inline-block';
         phone_mes.style.color = 'green'
         phone_mes.innerHTML = '<i class="success_icon"></i>手机号正确';
@@ -49,7 +52,7 @@ phone.addEventListener('blur', function() {
     } else {
         phone_mes.style.display = 'inline-block';
         phone_mes.style.color = 'red'
-        phone_mes.innerHTML = '<i class="erro_icon"></i>请输入11位手机号';
+        phone_mes.innerHTML = '<i class="erro_icon"></i>请输入正确的手机号';
     }
 })
 
