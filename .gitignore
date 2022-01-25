@@ -1,0 +1,4 @@
+#忽略package.json
+package.json
+#忽略服务器
+server.js
